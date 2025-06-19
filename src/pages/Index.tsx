@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -82,21 +83,61 @@ const Index = () => {
             Professional Wheel Pack
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((wheel) => (
-              <Card key={wheel} className="bg-slate-700/50 border-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6">
-                  <div className="aspect-square bg-gradient-to-br from-slate-600 to-slate-900 rounded-lg mb-4 flex items-center justify-center">
-                    <div className="w-24 h-24 bg-black rounded-full border-4 border-gray-400 relative">
-                      <div className="absolute inset-2 bg-gray-700 rounded-full flex items-center justify-center">
-                        <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
-                      </div>
+            <Card className="bg-slate-700/50 border-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105">
+              <CardContent className="p-6">
+                <div className="aspect-square bg-gradient-to-br from-slate-600 to-slate-900 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="w-24 h-24 bg-black rounded-full border-4 border-gray-400 relative">
+                    <div className="absolute inset-2 bg-gray-700 rounded-full flex items-center justify-center">
+                      <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">52mm PU Wheel #{wheel}</h3>
-                  <p className="text-gray-300 text-sm">95A Hardness • Black Color</p>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-white">Premium PU Construction</h3>
+                <p className="text-gray-300 text-sm">High resilient Polyurethane • Superior grip and durability</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-700/50 border-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105">
+              <CardContent className="p-6">
+                <div className="aspect-square bg-gradient-to-br from-slate-600 to-slate-900 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="w-24 h-24 bg-black rounded-full border-4 border-gray-400 relative">
+                    <div className="absolute inset-2 bg-gray-700 rounded-full flex items-center justify-center">
+                      <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-white">95A Hardness Rating</h3>
+                <p className="text-gray-300 text-sm">Perfect street hardness • Balanced speed and control</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-700/50 border-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105">
+              <CardContent className="p-6">
+                <div className="aspect-square bg-gradient-to-br from-slate-600 to-slate-900 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="w-24 h-24 bg-black rounded-full border-4 border-gray-400 relative">
+                    <div className="absolute inset-2 bg-gray-700 rounded-full flex items-center justify-center">
+                      <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-white">52mm Performance Size</h3>
+                <p className="text-gray-300 text-sm">Standard diameter • Optimal for tricks and street riding</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-700/50 border-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105">
+              <CardContent className="p-6">
+                <div className="aspect-square bg-gradient-to-br from-slate-600 to-slate-900 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="w-24 h-24 bg-black rounded-full border-4 border-gray-400 relative">
+                    <div className="absolute inset-2 bg-gray-700 rounded-full flex items-center justify-center">
+                      <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-white">ABEC-9 Titanium Bearings</h3>
+                <p className="text-gray-300 text-sm">Chrome steel precision • Maximum speed and smoothness</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
