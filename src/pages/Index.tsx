@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -48,7 +47,7 @@ const Index = () => {
                 disabled={isLoading}
                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                {isLoading ? "Processing..." : "Buy Now - $89.99"}
+                {isLoading ? "Processing..." : "Buy Now - $18.99"}
               </Button>
               <Button 
                 variant="outline" 
@@ -248,7 +247,7 @@ const Index = () => {
                 <div className="text-center">
                   <h3 className="text-2xl font-bold mb-4 text-white">Professional 4-Pack</h3>
                   <div className="text-6xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
-                    $89.99
+                    $18.99
                   </div>
                   <p className="text-gray-400 mb-6">Complete set: 4 wheels + 8 ABEC-9 bearings</p>
                   <ul className="text-left space-y-2 mb-8">
@@ -274,7 +273,7 @@ const Index = () => {
                     disabled={isLoading}
                     className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                   >
-                    {isLoading ? "Processing..." : "Order Complete Set - $89.99"}
+                    {isLoading ? "Processing..." : "Order Complete Set - $18.99"}
                   </Button>
                 </div>
               </CardContent>
