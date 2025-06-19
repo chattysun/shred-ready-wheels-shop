@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -375,7 +376,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-12 bg-black relative z-10">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">© 2024 Premium Wheels Co. All rights reserved.</p>
+          <p className="text-gray-400">© 2024 Sunshine Technology Programs LLC. All rights reserved.</p>
           <p className="text-gray-500 mt-2">Professional skateboard wheels with chrome steel bearings</p>
         </div>
       </footer>
