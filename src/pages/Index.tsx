@@ -24,6 +24,15 @@ const Index = () => {
     }
   };
 
+  const handleViewDetails = () => {
+    // Scroll to the technical specifications section
+    const specsSection = document.getElementById('technical-specs');
+    if (specsSection) {
+      specsSection.scrollIntoView({ behavior: 'smooth' });
+      toast.info("Check out the detailed specifications below!");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-black text-white">
       {/* Hero Section */}
@@ -50,8 +59,9 @@ const Index = () => {
                 {isLoading ? "Processing..." : "Buy Now - $18.99"}
               </Button>
               <Button 
+                onClick={handleViewDetails}
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300"
+                className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300"
               >
                 View Details
               </Button>
@@ -87,7 +97,7 @@ const Index = () => {
       </section>
 
       {/* Technical Specifications */}
-      <section className="py-20">
+      <section id="technical-specs" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Technical Specifications</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -165,7 +175,7 @@ const Index = () => {
               <p className="text-gray-400">Titanium chrome steel bearings for smooth rolling and superior speed</p>
             </div>
             <div className="text-center group">
-              <div className="bg-gradient-to-r from-purple-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-gradient-to-r from-purple-500 to-purple-600 w-16 h-12 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Truck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-white">Perfect Fit</h3>
