@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -37,7 +38,13 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-black text-white">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-blue-500/20"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/lovable-uploads/94e2cd0d-6552-40b3-8669-85a3e9f9e7cf.png')"
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/80"></div>
         <div className="container mx-auto px-4 z-10">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-6 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 text-sm font-semibold">
@@ -46,7 +53,7 @@ const Index = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent animate-fade-in">
               Roll Beyond Limits
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-300 animate-fade-in">
+            <p className="text-xl md:text-2xl mb-8 text-gray-100 animate-fade-in drop-shadow-lg">
               Professional-grade 52mm PU skateboard wheels with ABEC-9 titanium bearings. 
               Built for durability, engineered for performance.
             </p>
@@ -61,7 +68,7 @@ const Index = () => {
               <Button 
                 onClick={handleViewDetails}
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300"
+                className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm"
               >
                 View Details
               </Button>
