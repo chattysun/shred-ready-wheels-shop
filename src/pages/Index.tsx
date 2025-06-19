@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,10 +9,22 @@ import { loadStripe } from '@stripe/stripe-js';
 // Initialize Stripe with your publishable key
 const stripePromise = loadStripe('pk_live_51LYZfIE2em5gDg7zYgaxo5b35ScGMk1jP8OZ7KA7cbkVRn2wtcgB2FA2xyJBLLjI5qibwoyPc7aNRoooKT02cQV100mAVi0Y3E');
 
+// Declare gtag_report_conversion function type
+declare global {
+  interface Window {
+    gtag_report_conversion: (url?: string) => boolean;
+  }
+}
+
 const Index = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handlePurchase = async () => {
+    // Call Google Analytics conversion tracking
+    if (typeof window.gtag_report_conversion === 'function') {
+      window.gtag_report_conversion();
+    }
+
     setIsLoading(true);
     try {
       const stripe = await stripePromise;
