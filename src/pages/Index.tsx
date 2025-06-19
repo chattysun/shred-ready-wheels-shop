@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -22,25 +21,35 @@ const Index = () => {
         throw new Error('Stripe failed to load');
       }
 
+      // Create a checkout session using Stripe's API
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          items: [
+            {
+              name: 'Premium Skateboard Wheels Set',
+              description: '4x 52mm PU wheels + 8x chrome steel bearings',
+              amount: 1899, // $18.99 in cents
+              quantity: 1,
+            }
+          ],
+          success_url: `${window.location.origin}/success`,
+          cancel_url: `${window.location.origin}/`,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to create checkout session');
+      }
+
+      const { sessionId } = await response.json();
+
       // Redirect to Stripe Checkout
       const { error } = await stripe.redirectToCheckout({
-        lineItems: [
-          {
-            price_data: {
-              currency: 'usd',
-              product_data: {
-                name: 'Premium Skateboard Wheels Set',
-                description: '4x 52mm PU wheels + 8x chrome steel bearings',
-                images: ['https://your-domain.com/wheel-image.jpg'], // You can add your product image URL here
-              },
-              unit_amount: 1899, // $18.99 in cents
-            },
-            quantity: 1,
-          },
-        ],
-        mode: 'payment',
-        successUrl: `${window.location.origin}/success`,
-        cancelUrl: `${window.location.origin}/`,
+        sessionId: sessionId,
       });
 
       if (error) {
