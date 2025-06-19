@@ -32,8 +32,30 @@ const Index = () => {
         ],
         mode: 'payment',
         shippingAddressCollection: {
-          allowedCountries: ['US', 'CA'], // You can expand this list as needed
+          allowedCountries: ['US'],
         },
+        shippingOptions: [
+          {
+            shippingRateData: {
+              type: 'fixed_amount',
+              fixedAmount: {
+                amount: 0,
+                currency: 'usd',
+              },
+              displayName: 'Free shipping (Lower 48 states only)',
+              deliveryEstimate: {
+                minimum: {
+                  unit: 'business_day',
+                  value: 5,
+                },
+                maximum: {
+                  unit: 'business_day',
+                  value: 7,
+                },
+              },
+            },
+          },
+        ],
         successUrl: `${window.location.origin}/success`,
         cancelUrl: `${window.location.origin}/`,
       });
