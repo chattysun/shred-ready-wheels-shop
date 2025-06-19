@@ -21,35 +21,17 @@ const Index = () => {
         throw new Error('Stripe failed to load');
       }
 
-      // Create a checkout session using Stripe's API
-      const response = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          items: [
-            {
-              name: 'Premium Skateboard Wheels Set',
-              description: '4x 52mm PU wheels + 8x chrome steel bearings',
-              amount: 1899, // $18.99 in cents
-              quantity: 1,
-            }
-          ],
-          success_url: `${window.location.origin}/success`,
-          cancel_url: `${window.location.origin}/`,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to create checkout session');
-      }
-
-      const { sessionId } = await response.json();
-
-      // Redirect to Stripe Checkout
+      // Redirect to Stripe Checkout using your existing price
       const { error } = await stripe.redirectToCheckout({
-        sessionId: sessionId,
+        lineItems: [
+          {
+            price: 'price_1Rbmw5E2em5gDg7zh82haqc4', // Your existing price ID
+            quantity: 1,
+          },
+        ],
+        mode: 'payment',
+        successUrl: `${window.location.origin}/success`,
+        cancelUrl: `${window.location.origin}/`,
       });
 
       if (error) {
