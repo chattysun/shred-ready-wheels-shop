@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { loadStripe } from '@stripe/stripe-js';
 
 // Initialize Stripe with your publishable key
-const stripePromise = loadStripe('pk_live_51QRGjxIIl4PxqLQ6BQi6TKpvGqJa4MeBF0yEjvzTg5rXJrsBG1VtPwGk5XlIJrY0AW1OIGVkV5NjsxvKJ8xzm9W700KHlsWIHF');
+const stripePromise = loadStripe('pk_live_51LYZfIE2em5gDg7zYgaxo5b35ScGMk1jP8OZ7KA7cbkVRn2wtcgB2FA2xyJBLLjI5qibwoyPc7aNRoooKT02cQV100mAVi0Y3E');
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +17,7 @@ const Index = () => {
     setIsLoading(true);
     try {
       const stripe = await stripePromise;
-      
+
       if (!stripe) {
         throw new Error('Stripe failed to load');
       }
@@ -58,7 +58,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-black text-white">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="fixed inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('/lovable-uploads/94e2cd0d-6552-40b3-8669-85a3e9f9e7cf.png')"
@@ -74,18 +74,18 @@ const Index = () => {
               Roll Beyond Limits
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-100 animate-fade-in drop-shadow-lg">
-              Professional-grade 52mm PU skateboard wheels with high-quality chrome steel bearings. 
+              Professional-grade 52mm PU skateboard wheels with high-quality chrome steel bearings.
               Built for durability, engineered for performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-              <Button 
+              <Button
                 onClick={handlePurchase}
                 disabled={isLoading}
                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 {isLoading ? "Redirecting to Checkout..." : "Buy Now - $18.99"}
               </Button>
-              <Button 
+              <Button
                 onClick={handleViewDetails}
                 className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
               >
@@ -106,9 +106,9 @@ const Index = () => {
             <Card className="bg-slate-700/50 border-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6">
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/7144460f-d68f-4530-bf61-82a9f213de53.png" 
-                    alt="Premium PU Wheel with Chrome Steel Bearing Specifications" 
+                  <img
+                    src="/lovable-uploads/7144460f-d68f-4530-bf61-82a9f213de53.png"
+                    alt="Premium PU Wheel with Chrome Steel Bearing Specifications"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -120,9 +120,9 @@ const Index = () => {
             <Card className="bg-slate-700/50 border-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6">
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/95deef0a-46fc-4c2d-962c-ed251a16e430.png" 
-                    alt="95A Hardness Skateboard Wheels" 
+                  <img
+                    src="/lovable-uploads/95deef0a-46fc-4c2d-962c-ed251a16e430.png"
+                    alt="95A Hardness Skateboard Wheels"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -134,9 +134,9 @@ const Index = () => {
             <Card className="bg-slate-700/50 border-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6">
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/4d2d9298-0791-402c-8300-4dd7c224851f.png" 
-                    alt="52mm Performance Size Wheels on Skateboard" 
+                  <img
+                    src="/lovable-uploads/4d2d9298-0791-402c-8300-4dd7c224851f.png"
+                    alt="52mm Performance Size Wheels on Skateboard"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -148,9 +148,9 @@ const Index = () => {
             <Card className="bg-slate-700/50 border-slate-600 hover:bg-slate-700 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6">
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/5610317b-fe45-4aed-ab37-6b4e1e92f70a.png" 
-                    alt="608 Bearing - Designed for All Kinds of Skateboard" 
+                  <img
+                    src="/lovable-uploads/5610317b-fe45-4aed-ab37-6b4e1e92f70a.png"
+                    alt="608 Bearing - Designed for All Kinds of Skateboard"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -344,7 +344,7 @@ const Index = () => {
                       30-day money-back guarantee
                     </li>
                   </ul>
-                  <Button 
+                  <Button
                     onClick={handlePurchase}
                     disabled={isLoading}
                     className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -363,7 +363,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Ready to Upgrade Your Setup?</h2>
           <p className="text-xl mb-8 text-white/90">Professional-grade wheels and bearings for serious riders</p>
-          <Button 
+          <Button
             onClick={handlePurchase}
             disabled={isLoading}
             className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
