@@ -164,6 +164,19 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Get Yours CTA Section */}
+      <section className="py-16 relative z-10">
+        <div className="container mx-auto px-4 text-center">
+          <Button
+            onClick={handlePurchase}
+            disabled={isLoading}
+            className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+          >
+            {isLoading ? "Redirecting to Checkout..." : "Get Yours - $18.99"}
+          </Button>
+        </div>
+      </section>
+
       {/* Technical Specifications */}
       <section id="technical-specs" className="py-20 relative z-10">
         <div className="container mx-auto px-4">
