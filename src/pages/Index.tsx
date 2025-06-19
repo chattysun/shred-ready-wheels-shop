@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -39,7 +38,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="fixed inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('/lovable-uploads/94e2cd0d-6552-40b3-8669-85a3e9f9e7cf.png')"
           }}
@@ -67,8 +66,7 @@ const Index = () => {
               </Button>
               <Button 
                 onClick={handleViewDetails}
-                variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm"
+                className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
               >
                 View Details
               </Button>
@@ -78,7 +76,7 @@ const Index = () => {
       </section>
 
       {/* Product Showcase */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50 relative z-10">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
             Professional Wheel Pack
@@ -104,7 +102,7 @@ const Index = () => {
       </section>
 
       {/* Technical Specifications */}
-      <section id="technical-specs" className="py-20">
+      <section id="technical-specs" className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Technical Specifications</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -163,7 +161,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50 relative z-10">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Why Choose Our Wheels?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -200,7 +198,7 @@ const Index = () => {
       </section>
 
       {/* Package Contents */}
-      <section className="py-20">
+      <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">What's Included</h2>
           <div className="max-w-2xl mx-auto">
@@ -229,7 +227,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50 relative z-10">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">What Riders Say</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -255,7 +253,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8 text-white">Complete Wheel & Bearing Set</h2>
@@ -300,7 +298,7 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-blue-500">
+      <section className="py-20 bg-gradient-to-r from-orange-500 to-blue-500 relative z-10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Ready to Upgrade Your Setup?</h2>
           <p className="text-xl mb-8 text-white/90">Professional-grade wheels and bearings for serious riders</p>
@@ -315,7 +313,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-black">
+      <footer className="py-12 bg-black relative z-10">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-400">© 2024 Premium Wheels Co. All rights reserved.</p>
           <p className="text-gray-500 mt-2">Professional skateboard wheels with ABEC-9 bearings</p>
