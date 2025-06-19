@@ -129,8 +129,8 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                   <img 
-                    src="/lovable-uploads/69e01907-e19d-4a2c-825a-e8bc91a57032.png" 
-                    alt="8 Pieces Chrome Steel High Quality Bearings" 
+                    src="/lovable-uploads/d7ece8ff-32db-401c-a1eb-95d167ddce5a.png" 
+                    alt="608 Bearing - Designed for All Kinds of Skateboard" 
                     className="w-full h-full object-cover"
                   />
                 </div>
