@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -34,28 +33,6 @@ const Index = () => {
         shippingAddressCollection: {
           allowedCountries: ['US'],
         },
-        shippingOptions: [
-          {
-            shippingRateData: {
-              type: 'fixed_amount',
-              fixedAmount: {
-                amount: 0,
-                currency: 'usd',
-              },
-              displayName: 'Free shipping (Lower 48 states only)',
-              deliveryEstimate: {
-                minimum: {
-                  unit: 'business_day',
-                  value: 5,
-                },
-                maximum: {
-                  unit: 'business_day',
-                  value: 7,
-                },
-              },
-            },
-          },
-        ],
         successUrl: `${window.location.origin}/success`,
         cancelUrl: `${window.location.origin}/`,
       });
