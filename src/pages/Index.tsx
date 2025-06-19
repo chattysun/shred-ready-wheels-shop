@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -53,7 +54,7 @@ const Index = () => {
               Roll Beyond Limits
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-100 animate-fade-in drop-shadow-lg">
-              Professional-grade 52mm PU skateboard wheels with ABEC-9 titanium bearings. 
+              Professional-grade 52mm PU skateboard wheels with high-quality chrome steel bearings. 
               Built for durability, engineered for performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
@@ -87,7 +88,7 @@ const Index = () => {
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                   <img 
                     src="/lovable-uploads/7144460f-d68f-4530-bf61-82a9f213de53.png" 
-                    alt="Premium PU Wheel with ABEC-9 Bearing Specifications" 
+                    alt="Premium PU Wheel with Chrome Steel Bearing Specifications" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -129,12 +130,12 @@ const Index = () => {
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                   <img 
                     src="/lovable-uploads/69e01907-e19d-4a2c-825a-e8bc91a57032.png" 
-                    alt="8 Pieces ABEC-9 High Steel Bearings" 
+                    alt="8 Pieces Chrome Steel High Quality Bearings" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-white">ABEC-9 Titanium Bearings</h3>
-                <p className="text-gray-300 text-sm">Chrome steel precision • Maximum speed and smoothness</p>
+                <h3 className="text-xl font-semibold mb-2 text-white">Chrome Steel Bearings</h3>
+                <p className="text-gray-300 text-sm">High quality construction • Pre-lubricated for smoothness</p>
               </CardContent>
             </Card>
           </div>
@@ -186,13 +187,13 @@ const Index = () => {
                   <div className="bg-purple-500 w-12 h-12 rounded-full flex items-center justify-center mr-4">
                     <RotateCcw className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">ABEC-9 Bearings</h3>
+                  <h3 className="text-xl font-semibold text-white">608s Steel Bearings</h3>
                 </div>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• Titanium chrome steel construction</li>
-                  <li>• Inner Diameter: ~8mm</li>
-                  <li>• Outer Diameter: ~22mm</li>
-                  <li>• Thickness: ~7mm</li>
+                  <li>• Chrome steel & stainless steel ball</li>
+                  <li>• Outer Diameter: 22mm (0.87")</li>
+                  <li>• Inner Diameter: 8mm (0.31")</li>
+                  <li>• Width: 7mm (0.28")</li>
                 </ul>
               </CardContent>
             </Card>
@@ -216,8 +217,8 @@ const Index = () => {
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <RotateCcw className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">ABEC-9 Precision</h3>
-              <p className="text-gray-400">Titanium chrome steel bearings for smooth rolling and superior speed</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">Chrome Steel Precision</h3>
+              <p className="text-gray-400">High quality chrome steel bearings with pre-lubrication for smooth rolling</p>
             </div>
             <div className="text-center group">
               <div className="bg-gradient-to-r from-purple-500 to-purple-600 w-16 h-12 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -256,8 +257,8 @@ const Index = () => {
                     <div className="bg-blue-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-3xl font-bold text-white">8</span>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-white">ABEC-9 Bearings</h3>
-                    <p className="text-gray-300">Titanium chrome steel bearings for smooth performance</p>
+                    <h3 className="text-xl font-semibold mb-2 text-white">Chrome Steel Bearings</h3>
+                    <p className="text-gray-300">608s bearings with high-speed lubrication for smooth performance</p>
                   </div>
                 </div>
               </CardContent>
@@ -272,7 +273,7 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-center mb-16 text-white">What Riders Say</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Alex Chen", text: "The ABEC-9 bearings make such a difference! Super smooth ride.", rating: 5 },
+              { name: "Alex Chen", text: "The chrome steel bearings make such a difference! Super smooth ride.", rating: 5 },
               { name: "Maria Rodriguez", text: "Perfect replacement wheels. The 95A hardness is just right for street skating.", rating: 5 },
               { name: "Jake Thompson", text: "Quality PU material that actually lasts. Great value for the complete set!", rating: 5 }
             ].map((testimonial, index) => (
@@ -304,7 +305,7 @@ const Index = () => {
                   <div className="text-6xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
                     $18.99
                   </div>
-                  <p className="text-gray-400 mb-6">Complete set: 4 wheels + 8 ABEC-9 bearings</p>
+                  <p className="text-gray-400 mb-6">Complete set: 4 wheels + 8 chrome steel bearings</p>
                   <ul className="text-left space-y-2 mb-8">
                     <li className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
@@ -312,7 +313,7 @@ const Index = () => {
                     </li>
                     <li className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                      8x ABEC-9 titanium chrome bearings
+                      8x 608s chrome steel bearings
                     </li>
                     <li className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
@@ -356,7 +357,7 @@ const Index = () => {
       <footer className="py-12 bg-black relative z-10">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-400">© 2024 Premium Wheels Co. All rights reserved.</p>
-          <p className="text-gray-500 mt-2">Professional skateboard wheels with ABEC-9 bearings</p>
+          <p className="text-gray-500 mt-2">Professional skateboard wheels with chrome steel bearings</p>
         </div>
       </footer>
     </div>
