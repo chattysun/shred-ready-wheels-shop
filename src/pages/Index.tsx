@@ -31,6 +31,9 @@ const Index = () => {
           },
         ],
         mode: 'payment',
+        shippingAddressCollection: {
+          allowedCountries: ['US', 'CA'], // You can expand this list as needed
+        },
         successUrl: `${window.location.origin}/success`,
         cancelUrl: `${window.location.origin}/`,
       });
