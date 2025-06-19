@@ -5,6 +5,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Shield, Truck, RotateCcw, CheckCircle, Package, Wrench } from "lucide-react";
 import { toast } from "sonner";
+import { loadStripe } from '@stripe/stripe-js';
+
+// Initialize Stripe with your publishable key
+const stripePromise = loadStripe('pk_live_51QRGjxIIl4PxqLQ6BQi6TKpvGqJa4MeBF0yEjvzTg5rXJrsBG1VtPwGk5XlIJrY0AW1OIGVkV5NjsxvKJ8xzm9W700KHlsWIHF');
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -12,15 +16,39 @@ const Index = () => {
   const handlePurchase = async () => {
     setIsLoading(true);
     try {
-      // Simulate Stripe checkout process
-      toast.success("Redirecting to secure checkout...");
-      // In a real implementation, this would redirect to Stripe
-      setTimeout(() => {
-        setIsLoading(false);
-        toast.info("Stripe integration ready for your API keys!");
-      }, 2000);
+      const stripe = await stripePromise;
+      
+      if (!stripe) {
+        throw new Error('Stripe failed to load');
+      }
+
+      // Redirect to Stripe Checkout
+      const { error } = await stripe.redirectToCheckout({
+        lineItems: [
+          {
+            price_data: {
+              currency: 'usd',
+              product_data: {
+                name: 'Premium Skateboard Wheels Set',
+                description: '4x 52mm PU wheels + 8x chrome steel bearings',
+                images: ['https://your-domain.com/wheel-image.jpg'], // You can add your product image URL here
+              },
+              unit_amount: 1899, // $18.99 in cents
+            },
+            quantity: 1,
+          },
+        ],
+        mode: 'payment',
+        successUrl: `${window.location.origin}/success`,
+        cancelUrl: `${window.location.origin}/`,
+      });
+
+      if (error) {
+        throw new Error(error.message);
+      }
     } catch (error) {
-      toast.error("Something went wrong. Please try again.");
+      console.error('Stripe checkout error:', error);
+      toast.error("Something went wrong with checkout. Please try again.");
       setIsLoading(false);
     }
   };
@@ -63,7 +91,7 @@ const Index = () => {
                 disabled={isLoading}
                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                {isLoading ? "Processing..." : "Buy Now - $18.99"}
+                {isLoading ? "Redirecting to Checkout..." : "Buy Now - $18.99"}
               </Button>
               <Button 
                 onClick={handleViewDetails}
@@ -329,7 +357,7 @@ const Index = () => {
                     disabled={isLoading}
                     className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                   >
-                    {isLoading ? "Processing..." : "Order Complete Set - $18.99"}
+                    {isLoading ? "Redirecting to Checkout..." : "Order Complete Set - $18.99"}
                   </Button>
                 </div>
               </CardContent>
@@ -348,7 +376,7 @@ const Index = () => {
             disabled={isLoading}
             className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
           >
-            {isLoading ? "Processing..." : "Get Your Complete Set Now"}
+            {isLoading ? "Redirecting to Checkout..." : "Get Your Complete Set Now"}
           </Button>
         </div>
       </section>
