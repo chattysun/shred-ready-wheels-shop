@@ -129,7 +129,7 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="aspect-square bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                   <img 
-                    src="/lovable-uploads/d7ece8ff-32db-401c-a1eb-95d167ddce5a.png" 
+                    src="/lovable-uploads/5610317b-fe45-4aed-ab37-6b4e1e92f70a.png" 
                     alt="608 Bearing - Designed for All Kinds of Skateboard" 
                     className="w-full h-full object-cover"
                   />
